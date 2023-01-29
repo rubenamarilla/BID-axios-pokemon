@@ -12,11 +12,11 @@ const PokemonAxios = () => {
   return (
     <>
       <button onClick={obtenerPokemones}>Fetch Pokemons</button>
-      <ul>
+      <ol>
         {
           pokemones.map((pokemon, i)=> <li key={i}>{pokemon.name}</li>)
         }
-      </ul>
+      </ol>
     </>
   )
 }
