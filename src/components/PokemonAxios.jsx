@@ -6,8 +6,11 @@ const PokemonAxios = () => {
   const [pokemones, setPokemones] = useState([]);
 
   const obtenerPokemones = () => {
-    axios.get('https://pokeapi.co/api/v2/pokemon').then(response=>{
-    setPokemones(response.data.results)});
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=808&offset=0').then(response=>{
+    setPokemones(response.data.results);
+    console.log(response.data);
+  });
+    
   }
   return (
     <>
